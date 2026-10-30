@@ -1,0 +1,44 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: #1f2a44; font-family: system-ui, sans-serif; }
+#app canvas { display: block; touch-action: none; }
+#vr {
+  position: fixed; right: 18px; bottom: 18px;
+  padding: 12px 24px; font-size: 17px; font-weight: 800; letter-spacing: 0.02em;
+  color: #f4e8d0; background: #e2553a; border: 0; border-radius: 6px; cursor: pointer;
+  box-shadow: 0 4px 0 #8f2c1c, 0 6px 18px rgba(0,0,0,0.45);
+}
+#vr:disabled { background: #3b4a6b; color: #f4e8d0; box-shadow: none; cursor: default; }
+#hud {
+  display: none; position: fixed; left: 16px; top: 14px; max-width: min(520px, calc(100vw - 32px));
+  color: #1f2a44; font: 15px/1.45 system-ui, sans-serif; pointer-events: none;
+  background: rgba(244,232,208,0.9); padding: 8px 14px; border-radius: 4px; border-left: 6px solid #e2553a;
+}
+#hud b { color: #b8341f; font-size: 16px; }
+#hud em { color: #2f5d6c; font-style: normal; font-weight: 700; }
+#bar {
+  display: none; position: fixed; left: 50%; bottom: 18px; transform: translateX(-50%);
+  color: #f4e8d0; font: 700 14px/1 system-ui, sans-serif; pointer-events: none;
+  background: rgba(31,42,68,0.82); padding: 8px 14px; border-radius: 4px; white-space: nowrap;
+}
+#bar i { display: inline-block; width: 120px; height: 9px; background: #3b4a6b; vertical-align: middle; margin: 0 8px 0 4px; }
+#bar i b { display: block; height: 100%; background: #6fd0c4; }
+#bar .lo b { background: #e2553a; }
+#msg {
+  display: none; position: fixed; left: 50%; top: 20%; transform: translateX(-50%); max-width: calc(100vw - 32px);
+  font: 800 22px/1.35 system-ui, sans-serif; text-align: center; pointer-events: none; color: #f4e8d0;
+  background: rgba(31,42,68,0.78); padding: 8px 18px; border-radius: 4px; text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+#cross {
+  display: none; position: fixed; width: 18px; height: 18px; margin: -10px 0 0 -10px; pointer-events: none;
+  border: 2px solid rgba(255,214,120,0.9); border-radius: 50%;
+}
+#hint {
+  position: fixed; left: 16px; bottom: 60px; right: 300px; color: #f4e8d0; font: 13px/1.5 system-ui, sans-serif;
+  pointer-events: none;
+}
+#hint span { display: inline-block; background: rgba(31,42,68,0.78); padding: 6px 10px; border-radius: 4px; }
+#hint:empty { display: none; }
+#fps {
+  display: none; position: fixed; right: 16px; top: 14px; color: #ffd678; font: bold 15px monospace;
+  background: rgba(0,0,0,0.6); padding: 4px 8px; border-radius: 4px; pointer-events: none;
+}
+@media (max-width: 720px) { #hint { right: 16px; bottom: 110px; } #msg { font-size: 17px; top: 28%; } }

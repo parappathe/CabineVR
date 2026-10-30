@@ -1,0 +1,6 @@
+# Certificado HTTPS gerado pelo serve.py --https
+certs/
+__pycache__/
+*.log
+Thumbs.db
+desktop.ini
